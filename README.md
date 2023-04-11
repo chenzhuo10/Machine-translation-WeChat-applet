@@ -1,1 +1,24 @@
-# Machine-translation-WeChat-applet
+# 项目介绍
+
+ **项目名称：机器翻译微信小程序**
+
+
+
+## 项目需求
+
+ 通过微信小程序使用后台机器翻译服务。
+
+1. 翻译服务配置
+2. 翻译服务集成
+3. 翻译
+4. 第三方OCR、语音识别和语音合成集成
+
+## 项目负责人
+[谭玲玲](https://github.com/Kiiakia) 
+
+[陈焯](https://github.com/chenzhuo10)
+
+
+
+
+## 项目特性
