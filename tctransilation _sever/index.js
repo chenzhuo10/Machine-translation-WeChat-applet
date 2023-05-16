@@ -1,7 +1,7 @@
 //express_demo.js 文件
 const express = require('express');
-var { translate } = require('./translate');
-var scanImageInfo = require('./image');
+var { translate } = require('./api/translate');
+var scanImageInfo = require('./api/image');
 
 var app = express();
 
@@ -38,9 +38,8 @@ app.post("/image", async (req, res) => {
   const {imageData} = req.body; // 获取请求体中的图片数据
   // console.log(imageData);
   try {
-    // const result = await scanImageInfo(req.file.path);
     const result = await scanImageInfo(imageData);
-    console.log(result);
+    // console.log(result);
     if(!result) {
       throw new Error("Failed to retrieve image information.");
     }
@@ -52,6 +51,6 @@ app.post("/image", async (req, res) => {
 });
 
  
-app.listen(8081, function () {
+module.exports = app.listen(8081, function () {
   console.log("应用实例，访问地址为  http://localhost:8081");
 });
