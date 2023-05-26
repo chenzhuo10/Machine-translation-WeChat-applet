@@ -1,20 +1,17 @@
 // 获取应用实例
+import {translate} from '../../utils/api.js'
 const app = getApp()
 
 Page({
-    data:{
+	data:{
 		query: '',
 		hideClearIcon: true,
 		result: [],
 		curLang: {}
 	},
 	onLoad: function(options){
-		console.log('lonload..')
-		console.log(options)
 		if(options.query){
-			this.setData({
-				query: options.query
-			})
+			this.setData({query: options.query})
 		}
 	},
 	onShow: function(){
@@ -30,13 +27,12 @@ Page({
 		} else {
 			this.setData({'hideClearIcon': true})
 		}
-		console.log('focus')
 	},
 	onTapClose: function(){
 		this.setData({query: '', hideClearIcon: true})
 	},
 	onConfirm: function(){
-		if(!this.data.query) return
+		if (!this.data.query) return
 		translate(this.data.query, {from: 'auto', to: this.data.curLang.lang}).then(res => {
 			this.setData({'result': res.trans_result})
 			let history = wx.getStorageSync('history') || []
