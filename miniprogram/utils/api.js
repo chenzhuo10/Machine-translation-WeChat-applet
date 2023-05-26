@@ -70,4 +70,3 @@ function imageInfo(imageData) {
 
 module.exports.translate = translate;
 module.exports.imageInfo = imageInfo;
-
