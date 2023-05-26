@@ -7,15 +7,14 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#555555",
-    "navigationBarTitleText": "TC翻译",
+    "navigationBarTitleText": "纯风翻译",
 		"navigationBarTextStyle": "white",
-    "bagckgroundColor": "#333"
-  },
+		"navigationStyle":"custom"
+	},
 	"tabBar":{
+		"custom": true,
 		"borderStyle": "white",
 		"position": "bottom",
-		"color": "#595959",
-		"selectedColor": "#1c1b21",
 		"list": [
 			{
 				"pagePath": "pages/index/index",
@@ -23,10 +22,9 @@
 			},
 			{
 				"pagePath": "pages/history/history",
-				"text": "翻译"
+				"text": "历史"
 			}
 		]
 	},
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
