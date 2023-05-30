@@ -14,9 +14,25 @@ Page({
 		})
 	},
 	onClearItem: function(){
-		wx.clearStorage()
-		wx.reLaunch({
-			url:"/pages/history/history"
+		const that = this
+		wx.showModal({
+			title: "是否清除所有记录？",
+			showCancel: true,
+			success(res){
+				if (res.confirm) {
+					if(that.data.history){
+						wx.clearStorage()
+						that.onShow();
+					} else {
+						wx.showToast({
+							title: "没有记录哦",
+							icon: 'none',
+							duration: 1000,
+						})
+					}
+				}
+			}
 		})
+		
 	}
 })
