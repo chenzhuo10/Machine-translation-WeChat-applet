@@ -30,10 +30,17 @@
 				<text>  语音</text>
 			</view>
 
-			<view class="picture" hover-class="picture-hover" bindtap="doUpload">
-				<text class="iconfont icon-zhaoxiangji"></text>
-				<text>  照相</text>
-			</view>
+      <view class="picture" hover-class="picture-hover" bindtap="doUpload">
+          <text class="iconfont icon-zhaoxiangji"></text>
+          <text>  照相</text>
+      </view>
+
+      <!-- <navigator url="/pages/photo/photo" hover-class="navigator-hover">
+        <view class="picture" hover-class="picture-hover">
+          <text class="iconfont icon-zhaoxiangji"></text>
+          <text>  照相</text>
+        </view>
+      </navigator> -->
 
 			<view class="picture" hover-class="picture-hover" bindtap="fileUpload">
 			<text class="iconfont icon-24gl-fileText"></text>

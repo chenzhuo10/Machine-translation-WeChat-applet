@@ -1,4 +1,5 @@
 {
+  
   "plugins": {
 		"WechatSI": {
 			"version": "0.3.5",
@@ -8,7 +9,8 @@
   "pages":[
     "pages/index/index",
     "pages/history/history",
-    "pages/change/change"
+    "pages/change/change",
+	"pages/photo/photo"
   ],
   "window":{
     "navigationBarBackgroundColor": "#009384",

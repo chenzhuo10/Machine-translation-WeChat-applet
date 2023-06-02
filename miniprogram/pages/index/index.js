@@ -231,8 +231,8 @@ Page({
 		})
 	},
 
-    // 上传图片  
-    doUpload: function () {
+
+	doUpload: function () {
         var that = this;    
         // 选择图片，拍照或从相册中获取
         wx.chooseImage({      
@@ -243,22 +243,10 @@ Page({
                 wx.showLoading({          
                     title: '上传中',        
                 })
-                const filePath = res.tempFilePaths[0];                
-                // 上传图片        
-                wx.getFileSystemManager().readFile({          
-                    filePath: filePath,          
-                    encoding: 'base64',          
-                    success: function(res) {                    
-                        that.scanImageInfo(res.data);    // 调用百度API解析图片获取文字  
-                    },
-                    
-                    fail: function(res){            
-                        console.log("[读取图片数据fail]",res)          
-                    },            
-                    complete: function(res){            
-                        wx.hideLoading();          
-                    }    
-                });
+				let filePath = res.tempFilePaths[0];  
+				wx.navigateTo({
+					url: '/pages/photo/photo?src=' + filePath,
+				})               
             }
         });
     },
